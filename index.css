@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    box-shadow: 16px 14px 20px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(#ff0000c7 20deg, transparent 120deg);
+    animation: rotate 3s linear infinite alternate both running;
+}
+
+div::after {
+    content: "Animation Html Css";
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    background: #101010;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color:#ff0000;
+    font-size: x-large;
+    letter-spacing: 3px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 1);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
